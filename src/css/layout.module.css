@@ -1,5 +1,6 @@
 html,
 body {
+  font-family: "Inter";
   height: 100%;
   margin: 0;
 }
@@ -12,5 +13,5 @@ body {
 .mainContent {
   flex: 1;
   padding: 1rem;
-  background-color: #fff;
+  background-color: #1B1B1E;
 }

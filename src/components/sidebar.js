@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { sidebar, avatarContainer, links, name, role } from "/src/css/sidebar.module.css"
+import { sidebar, avatarContainer, links, name, role, avatar, linkInActive, linkActive } from "/src/css/sidebar.module.css"
 
 const Sidebar = () => {
     return (
         <div className={sidebar}>
             <div>
                 <div className={avatarContainer}>
-                    <img src="https://via.placeholder.com/200x200.png?text=Avatar" alt="Avatar" className="avatar" />
+                    <img className={avatar} src="https://avatars.githubusercontent.com/u/46416247?v=4" alt="Avatar" />
 
                 </div>
                 <div>
@@ -17,11 +17,12 @@ const Sidebar = () => {
             </div>
             <div>
                 <ul className={links}>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About Me</Link></li>
+                    <li><Link activeClassName={linkActive} className={linkInActive} to="/">Home</Link></li>
+                    <li><Link activeClassName={linkActive} className={linkInActive} to="/about">About</Link></li>
+                    <li><Link activeClassName={linkActive} className={linkInActive} to="/project">Project</Link></li>
                 </ul>
             </div>
-        </div>
+        </div >
     );
 }
 
