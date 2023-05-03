@@ -12,6 +12,8 @@ body {
 
 .mainContent {
   flex: 1;
-  padding: 1rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  padding-top: 2.5rem;
   background-color: #1B1B1E;
 }
