@@ -1,36 +1,24 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import Sidebar from '/src/components/sidebar'
 import {
   container,
   heading,
-  navLinks,
-  navLinkItem,
-  navLinkText
+  mainContent
 } from '/src/css/layout.module.css'
+
 
 const Layout = ({ pageTitle, children }) => {
   return (
+
     <div className={container}>
-      <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              Home
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
-              About
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <main>
+      <Sidebar />
+      <div className={mainContent}>
         <h1 className={heading}>{pageTitle}</h1>
         {children}
-      </main>
+      </div>
     </div>
   )
 }
 
 export default Layout
+
